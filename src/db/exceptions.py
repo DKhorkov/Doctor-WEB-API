@@ -1,0 +1,2 @@
+class InvalidFileOwnerError(Exception):
+    pass
