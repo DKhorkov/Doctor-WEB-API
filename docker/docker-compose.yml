@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  doctor_web_api:
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    entrypoint: /app/docker/entrypoint.sh
+    volumes:
+      - ../database:/app/database
+      - ../store:/app/store
+    environment:
+      HOST: "0.0.0.0"
+      PORT: 8080
+      DEBUG: "--no-debug"
