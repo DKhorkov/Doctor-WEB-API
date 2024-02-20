@@ -30,7 +30,7 @@ There are two ways to download file
 (for both HTTP GET method should be used):
 1) use <b><i>http://API_Domain/download/{hashed_filename}></i></b> 
 url.
-2) use <b><i>http://API_Domain/download/></i></b> url and pass 
+2) use <b><i>http://API_Domain/download/</i></b> url and pass 
 <b><i>hashed_filename</i></b> parameter using query in 
 field without name or in field with according name ("hashed_filename").
 
@@ -43,7 +43,7 @@ There are two ways to delete file
 (for both HTTP DELETE method should be used):
 1) use <b><i>http://API_Domain/delete/{hashed_filename}></i></b> 
 url.
-2) use <b><i>http://API_Domain/delete/></i></b> url and pass 
+2) use <b><i>http://API_Domain/delete/</i></b> url and pass 
 <b><i>hashed_filename</i></b> parameter using query in 
 field without name or in field with according name ("hashed_filename").
 
