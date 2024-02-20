@@ -26,7 +26,11 @@ def upload_view() -> Response:
 
     filename: AnyStr = file.filename
     file_extension: AnyStr = filename.split(FileExtension.separator.value)[FileExtension.index.value]
-    hashed_filename: AnyStr = Hasher.hash(filename)
+
+    # On case, if different users will upload file with the equal name:
+    filename_for_hash: AnyStr = f'{filename}_{request.authorization.username}'
+    
+    hashed_filename: AnyStr = Hasher.hash(filename_for_hash)
     filename_prefix: AnyStr = hashed_filename[:FILE_PREFIX_LENGTH]
     file_folder_path: Path = UPLOAD_DIR / filename_prefix
     if not os.path.exists(file_folder_path):
